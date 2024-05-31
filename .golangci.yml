@@ -7,15 +7,31 @@ linters-settings:
     locale: US
 
 linters:
-  disable-all: true
   enable:
-    - goimports
-    - deadcode
-    - errcheck
-    - gocognit
-    - gocyclo
-    - gofmt
-    - govet
-    - misspell
-    - staticcheck
-    - whitespace
+    - errcheck # checks unchecked errors
+    - gosimple # simplify code
+    - govet # examines Go source code and reports suspicious constructs
+    - ineffassign # detect unused assign
+    - staticcheck # cover Go vet edge cases
+    - typecheck # type-checks Go code
+    - unused # checks Go code for unused constants, variables, functions and types
+    - bidichk # checks for dangerous unicode character sequences
+    - bodyclose # checks whether HTTP response body is closed successfully
+#    - contextcheck # check the function whether use a non-inherited context
+    - durationcheck # check for two durations multiplied together
+    - errname # checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
+    - errorlint # find code that will cause problems with the error wrapping scheme
+    - exportloopref # checks for pointers to enclosing loop variables
+    - gocritic # provides diagnostics that check for bugs, performance and style issues
+    - gofmt # checks whether code was gofmt-ed
+    - goimports # fix imports, formats your code in the same style as gofmt
+    - misspell # finds commonly misspelled English words in comments
+    - noctx # finds sending http request without context.Context
+    - predeclared # find code that shadows one of Go's predeclared identifiers
+    - revive # replacement of golint
+    - rowserrcheck # checks whether Err of rows is checked successfully
+    - sqlclosecheck # checks that sql.Rows and sql.Stmt are closed.
+    - unconvert # remove unnecessary type conversions
+    - wastedassign # finds wasted assignment statements.
+    - whitespace # tool for detection of leading and trailing whitespace
+#    - wrapcheck # check that errors from external packages are wrapped during return to help identify the error source.
