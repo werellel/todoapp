@@ -6,7 +6,7 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	wantPort := 3333
+	wantPort := 3334
 	t.Setenv("PORT", fmt.Sprint(wantPort))
 
 	got, err := New()
