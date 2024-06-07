@@ -8,6 +8,8 @@ import (
 )
 
 func TestNewMux(t *testing.T) {
+	// httptest.NewRecorder 함수를 사용하면 ResponseWriter 인터페이스를
+	// 충족하는 Response Recorder 타입의 값을 얻을 수 있다.
 	w := httptest.NewRecorder()
 	r := httptest.NewRequest(http.MethodGet, "/health", nil)
 	sut := NewMux()
